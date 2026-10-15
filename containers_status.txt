@@ -1,0 +1,8 @@
+NAME              IMAGE                                             COMMAND                  SERVICE                  CREATED              STATUS                        PORTS
+grafana           grafana/grafana:11.2.0                            "/run.sh"                grafana                  About a minute ago   Up About a minute             0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp
+loki              grafana/loki:2.9.0                                "/usr/bin/loki -conf…"   loki                     About a minute ago   Up About a minute             0.0.0.0:3100->3100/tcp, [::]:3100->3100/tcp
+nextcloud         nextcloud:29.0.6                                  "/entrypoint.sh apac…"   nextcloud                About a minute ago   Up About a minute             0.0.0.0:8080->80/tcp, [::]:8080->80/tcp
+postgres-zabbix   postgres:15                                       "docker-entrypoint.s…"   postgres-zabbix          About a minute ago   Up About a minute (healthy)   5432/tcp
+promtail          grafana/promtail:2.9.0                            "/usr/bin/promtail -…"   promtail                 About a minute ago   Up About a minute             
+zabbix-back       zabbix/zabbix-server-pgsql:ubuntu-6.4-latest      "/usr/bin/tini -- /u…"   zabbix-server            About a minute ago   Up About a minute             0.0.0.0:10051->10051/tcp, [::]:10051->10051/tcp
+zabbix-front      zabbix/zabbix-web-nginx-pgsql:ubuntu-6.4-latest   "docker-entrypoint.sh"   zabbix-web-nginx-pgsql   About a minute ago   Up About a minute (healthy)   0.0.0.0:8082->8080/tcp, [::]:8082->8080/tcp
